@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index/style.css">
+    <script src="js/mobile-navigation.js" defer></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/pop-up.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__heading">
+                    <img class="header__logo" src="img/logo.svg">
+                    <h1 class="header__text">My space</h1>
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Про нас</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Новини</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="mobile-navigation-button" id="mobile-nav-btn">
+                    <svg class="mobile-navigation-button__icon" viewBox="0 0 20 20">
+                        <path fill="rgb(86, 111, 150)" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
+                            c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
+                            s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
+                            c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                    </svg>
+                </button>
+                <nav class="mobile-navigation" id="mobile-nav">
+                    <button class="mobile-navigation__close-button" id="close-nav-btn">
+                        <svg class="mobille-navigation__icon" viewBox="0 0 20 20">
+							<path fill="rgb(53, 59, 72)" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+						</svg>
+                    </button>
+                    <ul class="mobile-navigation__list">
+                        <li class="mobile-navigation__item">
+                            <a class="mobile-navigation__link" href="#">Про нас</a>
+                        </li>
+                        <hr class="mobile-navigation__line"/>
+                        <li class="mobile-navigation__item">
+                            <a class="mobile-navigation__link" href="#">Новини</a>
+                        </li>
+                        <hr class="mobile-navigation__line"/>
+                        <li class="mobile-navigation__item">
+                            <a class="mobile-navigation__link" href="#">Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <img class="main__image" src="img/astronaut.png">
+            <form class="form">
+                <div class="form__container">
+                    <h2 class="form__heading">Електронна черга для польоту у космос</h2>
+                    <div class="form__input-block">
+                        <label class="form__label" for="name">Ім'я</label>
+                        <input class="form__input" id="name" placeholder="Введіть ім'я">
+                    </div>
+                    <div class="form__input-block">
+                        <label class="form__label" for="phone">Номер</label>
+                        <input class="form__input" id="phone" type="tel" placeholder="+38 (__) ___ __ __">
+                    </div>
+                    <div class="form__select-block">
+                        <label class="form__label" for="planet">Планета</label>
+                        <select class="form__input" id="planet">
+                            <option value="mercury">Меркурій</option>
+                            <option value="venus">Венера</option>
+                            <option value="earth">Земля</option>
+                            <option value="mars">Марс</option>
+                            <option value="jupiter">Юпітер</option>
+                            <option value="saturn">Сатурн</option>
+                            <option value="uranus">Уран</option>
+                            <option value="neptune">Нептун</option>
+                        </select>
+                    </div>
+                    <input class="form__button" id ='send-btn' type="button" value="Зареєструватися">
+                </div>
+            </form>
+            <div class="registration-dialog" id="reg-dialog">
+                <div class="registration-dialog__pop-up" id="reg-dialog-pop-up">
+                    <p class="registration-dialog__text">Вітаємо! Ваша заявка була відправлена у чергу</p>
+                    <img class="registration-dialog__image" src="img/rocket.svg">
+                    <button class="registration-dialog__button" id="reg-dialog-btn">Закрити</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">© 2022 My space. Всі права захищені</p>
+        </footer>
+    </div>
+</body>
+</html>
